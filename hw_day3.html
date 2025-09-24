@@ -1,0 +1,54 @@
+<!-- Create a web page for a "Course Progress Dashboard". The page should include:
+A breadcrumb showing the navigation path: Home > Courses > Web Development
+A heading that says “Web Development Course” with a badge showing “New” next to it
+Four progress bars for different course modules:
+HTML – 100% complete (green striped bar with label)
+CSS – 75% complete (blue animated striped bar with label)
+JavaScript – 50% complete (orange bar with label)
+Bootstrap – 25% complete (red bar with label)
+A button group with different button styles for each action: Start, Pause, Reset
+A pagination at the bottom showing page numbers 1 to 3, with page 1 active and page 3 disabled
+Make it visually clean, centered, and responsive using Bootstrap -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+        <title>COURSE PROGRESS DASHBOARD</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    </head>
+    <body>
+        <ul class = "breadcrumb">
+            <li class = "breadcrumb-item"><a href = "#">Home</a></li>
+            <li class = "breadcrumb-item"><a href="#">Courses</a></li>
+            <li class = "breadcrumb-item active" aria-current = "page">Web Development</li>
+         </ul>
+         <center><h3>Web Development Course
+            <span class="badge badge-success">New</span>
+        </h3><br></center>
+        <div class="progress">
+            <div class="progress-bar progress-bar-striped bg-success" style="width:100%">HTML-100% Completed</div>
+        </div><br>
+        <div class="progress">
+            <div class="progress-bar progress-bar-striped progress-bar-animated " style="width:75%">CSS-75% Completed</div>
+        </div><br>
+        <div class="progress">
+            <div class="progress-bar progress-bar-striped bg-warning" style="width:50%">JavaScript-50% Completed</div>
+        </div><br>
+        <div class="progress">
+            <div class="progress-bar progress-bar-striped bg-danger" style="width:25%">Bootstrap-25% Completed</div>
+        </div><br>
+        <center><div>
+            <button type="button" class="btn btn-success">Start</button>
+            <button type="button" class="btn btn-warning">Pause</button>
+            <button type="button" class="btn btn-secondary">Reset</button>
+        </div></center><br>
+        <ul class="pagination justify-content-center">
+            <li class="page-item active"><a class="page-link" href="#">1</a></li>
+            <li class="page-item"><a class="page-link" href="#">2</a></li>
+            <li class="page-item disabled"><a class="page-link" href="#">3</a></li>
+          </ul>
+    </body>
+</html>
