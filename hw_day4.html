@@ -1,0 +1,128 @@
+<!-- Create a "Product Feature Page" that displays 3 product cards in a row.
+Each card must include a header with the product name, an image, a short description, a link to read more, and a dropdown with extra options like "Add to Wishlist", "Compare", and "Report". 
+Also include an accordion section at the bottom of the page to show product FAQs. 
+Ensure the layout looks clean and professional using Bootstrap features only from today's topics. -->
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <title>Product Feature Page</title>
+</head>
+<body>
+    <h3 class="text-success text-center" >PRODUCT FEATURE PAGE</h3>
+    <br>
+    <div class="card-deck">
+            <div class="card bg-light text-dark">  
+                 <div class="card-body text-center">
+                     <h4 class="card-title">Palaka Pendant Chain</h4>
+                     <img src="https://tse3.mm.bing.net/th/id/OIP.6ys9ZNYx1tNe5QD7H--YGQHaHa?w=2560&h=2560&rs=1&pid=ImgDetMain&o=7&rm=3" alt="Palaka Pendant Chain" style="width: 250px; height: 250px;">
+                     <p class="card-text"> Palakka pendant chain is a traditional South Indian jewellery piece featuring a leaf-shaped palakka design in blue enamel.
+                        <a href="#readmoreProduct1" data-toggle="collapse">read more...</a>
+                        <div id="readmoreProduct1" class="collapse">
+                        This ornament has roots in Kerala’s jewellery traditions, where palakka designs are widely used in necklaces, harams, and pendants. It is commonly worn during weddings, temple festivals, and cultural occasions. The chain pairs well with sarees, especially Kasavu or silk varieties, and can also be layered with other ornaments. The blue palakka pendant chain adds a cultural touch to ethnic attire
+                        </div>
+                    </p>
+                     <div class ="dropdown">
+                        <button type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown">Extra Options</button>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="#">Add to Wishlist</a>
+                                <a class="dropdown-item" href="#">Compare</a>
+                                <a class="dropdown-item" href="#">Report</a>
+                            </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card bg-light text-dark">  
+                 <div class="card-body text-center">
+                     <h4 class="card-title">Kashi Gopuram Chettinad Chain</h4>
+                     <img src="https://ohbyozy.com/cdn/shop/files/IMG_2171.jpg?v=1742913729&width=1946" alt="Kashi Gopuram Chettinad Chain" style="width: 250px; height: 250px;">
+                     <p class="card-text"> The Kashi Gopuram Chettinad Chain is a traditional Chettinad-inspired jewelry piece, combining cultural elegance with a modern chain design, currently available online at competitive prices.
+                        <a href="#readmoreProduct2" data-toggle="collapse">read more...</a>
+                        <div id="readmoreProduct2" class="collapse">
+                        Chettinad jewellery embodies the heritage, identity, and traditions of the Chettiar community, reflecting centuries of artistry, cultural values, and social symbolism in South India.
+                        </div>
+                    </p>
+                     <div class ="dropdown">
+                        <button type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown">Extra Options</button>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="#">Add to Wishlist</a>
+                                <a class="dropdown-item" href="#">Compare</a>
+                                <a class="dropdown-item" href="#">Report</a>
+                            </div>
+                    </div>
+                </div>
+            </div>
+           <div class="card bg-light text-dark">  
+                 <div class="card-body text-center">
+                     <h4 class="card-title">Roopali Kemp Necklace</h4>
+                     <img src="https://tse1.mm.bing.net/th/id/OIP.zpdO0_HSPODXrmiEosHoAAHaNK?rs=1&pid=ImgDetMain&o=7&rm=3" alt="Roopali kemp Necklace" style="width: 150px; height: 250px;">
+                     <p class="card-text"> Pioneers in the industry, we offer Roopali Kemp Necklace and Kemp Vaahini Attigai from India.
+                        <a href="#readmoreProduct3" data-toggle="collapse">read more...</a>
+                        <div id="readmoreProduct3" class="collapse">
+                        The Roopali Kemp Necklace is a traditional South Indian jewelry piece featuring red or multi-colored Kemp stones, often styled for weddings, festivals, and classical dance performances, available in both real and imitation versions online.
+
+                        </div>
+                    </p>
+                     <div class ="dropdown">
+                        <button type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown">Extra Options</button>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="#">Add to Wishlist</a>
+                                <a class="dropdown-item" href="#">Compare</a>
+                                <a class="dropdown-item" href="#">Report</a>
+                            </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br>
+        <h4 class="text-center text-info">FAQ Section</h4>
+        <br>
+        <div id = "accordion">
+            <div class = "card">
+               <div class = "card-header">
+                  <a class = "card-link" data-toggle = "collapse" href = "#collapseOne">
+                    What payment methods do you accept?
+                  </a>
+               </div>
+               <div id = "collapseOne" class = "collapse" data-parent = "#accordion">
+                  <div class = "card-body">
+                    We accept credit cards, debit cards, UPI, net banking, and major digital wallets such as Google Pay and Paytm
+                  </div>
+               </div>
+            </div>
+            <div class = "card">
+               <div class = "card-header">
+                  <a class = "collapsed card-link" data-toggle = "collapse" href = "#collapseTwo">
+                     Where can I check my order status?
+                  </a>
+               </div>
+               <div id = "collapseTwo" class = "collapse" data-parent = "#accordion">
+                  <div class = "card-body">
+                    Log in to your account and go to “My Orders” to track your order status in real-time.
+                  </div>
+               </div>
+            </div>
+            <div class = "card">
+               <div class = "card-header">
+                  <a class = "collapsed card-link" data-toggle = "collapse" href = "#collapseThree">
+                     How do I contact customer support?
+                  </a>
+               </div>
+               <div id ="collapseThree" class = "collapse" data-parent = "#accordion">
+                  <div class = "card-body"> 
+                    You can reach us via email at support@company.com or call our toll-free number 1800-123-456.
+                  </div>
+               </div>
+            </div>
+         </div>
+         <br>
+</body>
+</html>

@@ -1,0 +1,74 @@
+<!-- Create a simple web page for a fictional travel agency called "SkyWay Travels". 
+Your task is to include a navigation bar at the top with the following links: "Home", "Destinations", "Bookings", and "Contact".
+
+The "Bookings" link should appear disabled.
+The navbar should have a background color of your choice (not white).
+The navbar content must be centered horizontally.
+Below the navbar, add navigation pills for filtering destination types: "Beach", "Mountain", "City", and "Adventure".
+Lastly, add a vertical nav menu on the left side (you can simulate a sidebar) with options like "Offers", "Packages", "Gallery", "Support" -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SkyWay Travels</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <nav class="navbar navbar-expand-sm bg-primary justify-content-center">
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link text-white" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-white" href="#">Destinations</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link disabled" href="#">Bookings</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-white" href="#">Contact</a>
+            </li>
+        </ul>
+    </nav>
+    <br>
+
+    <ul class="nav nav-pills justify-content-center">
+        <li class="nav-item">
+            <a class="nav-link active" href="#">Beach</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#">Mountain</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#">City</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#">Adventure</a>
+        </li>
+    </ul>
+    <ul class="nav flex-column">
+        <li class="nav-item">
+            <a class="nav-link" href="#">Offers</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#">Packages</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#">Gallery</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#">Support</a>
+        </li>
+    </ul>
+     <h3 class="text-center">Welcome to SkyWay Travels</h3>
+    <p class="text-center">
+          Discover amazing destinations and exclusive travel experiences with us!
+    </p>
+</body>
+</html>
