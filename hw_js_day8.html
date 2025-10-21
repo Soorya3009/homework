@@ -1,0 +1,73 @@
+<!-- You are building a simple input system for a small game. The game gives players 5 chances to guess a number between 1 and 5. 
+The game should work like this:
+Ask the player to enter a number between 1 and 5.
+If the number is 3, display: "You guessed it right!" and stop the game.
+If the number is not 3, display: "Wrong guess. Try again."
+If the player enters a number outside the range (not 1 to 5), display "Invalid input" and skip that chance using continue.
+If the player doesn’t guess the correct number within 5 valid chances, display "Game over".
+
+
+You must use:
+A loop
+An if-else statement
+A break statement
+A continue statement
+A switch to display the number they entered in words (e.g., 1 = "One") -->
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Hw js day 8</title>
+</head>
+<body>
+    <h2>Number Guessing Game</h2>
+    <script>
+        let chances = 0; 
+
+        while (chances < 5) {
+
+            let guess = parseInt(prompt("Enter a number between 1 and 5:"));
+
+            if (guess < 1 || guess > 5 || isNaN(guess)) {
+                alert("Invalid input");
+                continue; 
+            }
+
+
+            let numberInWords = "";
+            switch(guess) {
+                case 1:
+                    numberInWords = "One";
+                    break;
+                case 2:
+                    numberInWords = "Two";
+                    break;
+                case 3:
+                    numberInWords = "Three";
+                    break;
+                case 4:
+                    numberInWords = "Four";
+                    break;
+                case 5:
+                    numberInWords = "Five";
+                    break;
+            }
+            alert(`You entered: ${numberInWords}`);
+
+            if (guess === 3) {
+                alert("You guessed it right!");
+                break; 
+            } else {
+                alert("Wrong guess. Try again.");
+            }
+
+            chances++;
+        }
+
+        if (chances === 5) {
+            alert("Game over");
+        }
+    </script>
+</body>
+</html>

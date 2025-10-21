@@ -1,0 +1,52 @@
+<!-- You are designing a simple calculator for a small grocery shop. The shop sells three items: rice, sugar, and wheat.
+Your task is to:
+Create variables for the item names, prices, and quantities purchased.
+Calculate and display the cost for each item (price × quantity).
+Calculate the total bill for the customer.
+Change the quantity of one item and recalculate the total.
+Display the updated total bill.
+Use only what you’ve learned today, and make sure to follow variable naming rules. Output all the values using console.log() -->
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day1 JS HW</title>
+</head>
+<body>
+    <script>
+        var rice;
+        var sugar;
+        var wheat;
+
+        var rice_price=40;
+        var sugar_price=20;
+        var wheat_price=30;
+
+        var rice_qty=3;
+        var sugar_qty=2;
+        var wheat_qty=4;
+
+        var rice_cost=rice_price*rice_qty;
+        var sugar_cost=sugar_price*sugar_qty;
+        var wheat_cost=wheat_price*wheat_qty;
+
+        console.log("Rice cost:"+rice_cost);
+        console.log("Sugar cost:"+sugar_cost);
+        console.log("Wheat cost:"+wheat_cost);
+
+        var total_bill=rice_cost+sugar_cost+wheat_cost;
+
+        console.log("Total Bill:"+total_bill);
+
+        sugar_qty=5;
+        sugar_cost=sugar_price*sugar_qty;
+        var updated_bill=rice_cost+sugar_cost+wheat_cost;
+        console.log("Updated Bill:"+updated_bill);
+        
+    </script>
+</body>
+</html>

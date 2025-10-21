@@ -1,0 +1,37 @@
+<!-- Imagine you're building a basic profile page for a user on a small website. Create a script that:
+Stores the user's name, age, and whether they are an admin using variables.
+Checks whether the user is old enough to access admin features (age should be 18 or more and user must be admin).
+Use the conditional ? : operator to display either "Access Granted" or "Access Denied" based on the condition.
+Display the result only when a button is clicked.
+Also check if the "age" property exists in the user object using the "in" operator.
+Delete the "age" property after the check using the delete operator -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HW JS DAY 5</title>
+</head>
+<body>
+    <h2>User Profile Page</h2>
+    <button id="checkAccess">Check Admin Access</button>
+    <div id="output"></div>
+    <script>
+        let user = {
+            name: "Soorya",
+            age: 22,
+            isAdmin: true
+        };
+        document.getElementById("checkAccess").addEventListener("click", () => {
+            let hasAge = "age" in user;
+            console.log("Does user have an age property?", hasAge);
+            let result = (user.age >= 18 && user.isAdmin)? "Access Granted": "Access Denied";
+
+            document.getElementById("output").textContent = result;
+            delete user.age;
+            console.log("User object after deleting age:", user);
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!-- You are building a simple contact manager app. Each contact has a name, phone number, and email address.
+You want to group contacts as objects and add a method that shows the contact's full information in a neat format.
+Your tasks are:
+Create an object called contact1 with the following properties: name, phone, and email.
+Add a method getInfo inside the object that returns a single string combining all the contact details.
+Create a function printContactInfo(contact) that takes a contact object as a parameter and prints its getInfo() result.
+Create another contact called contact2 using the same structure.
+Call the printContactInfo() function for both contacts. -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HW JS day 2</title>
+</head>
+<body>
+    <script>
+        let contact1={
+            name:"Soorya",
+            phone:9876543210,
+            email:"soorya@gmail.com",
+            getInfo:function(){
+                return("Name:"+contact1.name+""+" phone:"+contact1.phone+""+" Email:"+contact1.email);
+            }
+        }
+        
+         let contact2={
+            name:"Aarunya",
+            phone:9876543210,
+            email:"aarunya@gmail.com",
+            getInfo:function(){
+                return("Name:"+contact2.name+""+" phone:"+contact2.phone+""+" Email:"+contact2.email);
+            }
+        }
+        function printContactInfo(contact){
+            console.log(contact.getInfo());
+        }
+        printContactInfo(contact1);
+        printContactInfo(contact2);
+        
+    </script>
+
+</body>
+</html>

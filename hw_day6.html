@@ -1,0 +1,114 @@
+<!-- Create a feedback form for a small online bakery. 
+The form should include fields to collect the customer's name, email, their feedback message, preferred contact method (email or phone), 
+satisfaction level (range from 1–10), and a dropdown to choose the type of order (Cake, Cookies, Pastries). 
+Include a submit button at the bottom. Make sure the form is well-aligned and styled using Bootstrap only -->
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Bakery</title>
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h2 class="text-center">Feedback Form</h2>
+        <div class="form-group">
+            <label for="name">Full Name:</label><br>
+            <input type="text" class="form-contrl" id="name" placeholder="Enter your fullname">
+        </div>
+        <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" class="form-control" id="email" placeholder="Enter your email" name="email">
+        </div>
+        <div class="form-group">
+            <label for="feedback">Comment your feedback:</label>
+            <textarea class="form-control" id="feedback"  placeholder="Write your valuable feedback here...."></textarea>
+        </div>
+        <div class="form-group">
+            <label>Preferred Contact Method..</label>
+            <br>
+            <div class="form-check-inline">
+                <label class="form-check-label">
+                    <input type="radio" class="form-check-input "name="optradio">Email
+                </label>
+            </div>
+            <div class="form-check-inline">
+                <label class="form-check-label">
+                    <input type="radio" class="form-check-input"name="optradio" >Phone
+                </label>
+            </div>
+        </div>
+        <div class="form-group">
+            <label>Satisfaction Level:</label>
+            <br>
+            <div class="form-check-inline">
+                <label class="form-check-label">
+                    <input type="radio" class="form-check-input "name="optradio">1
+                </label>
+            </div>
+            <div class="form-check-inline">
+                <label class="form-check-label">
+                    <input type="radio" class="form-check-input"name="optradio" >2
+                </label>
+            </div>
+            <div class="form-check-inline">
+                <label class="form-check-label">
+                    <input type="radio" class="form-check-input" name="optradio">3
+                </label>
+            </div>
+            <div class="form-check-inline">
+                <label class="form-check-label">
+                    <input type="radio" class="form-check-input" name="optradio">4
+                </label>
+            </div>
+            <div class="form-check-inline">
+                <label class="form-check-label">
+                    <input type="radio" class="form-check-input" name="optradio">5
+                </label>
+            </div>
+             <div class="form-check-inline">
+                <label class="form-check-label">
+                    <input type="radio" class="form-check-input" name="optradio">6
+                </label>
+            </div>
+             <div class="form-check-inline">
+                <label class="form-check-label">
+                    <input type="radio" class="form-check-input" name="optradio">7
+                </label>
+            </div>
+             <div class="form-check-inline">
+                <label class="form-check-label">
+                    <input type="radio" class="form-check-input" name="optradio">8
+                </label>
+            </div>
+             <div class="form-check-inline">
+                <label class="form-check-label">
+                    <input type="radio" class="form-check-input" name="optradio">9
+                </label>
+            </div>
+             <div class="form-check-inline">
+                <label class="form-check-label">
+                    <input type="radio" class="form-check-input" name="optradio">10
+                </label>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="found">Choose the type of order..</label>
+            <select class="form-control" id="found">
+                <option>Cake</option>
+                <option>Cookies</option>
+                <option>Pastries</option>
+            </select>
+        </div>
+        <button type="submit" class="btn btn-primary text-center">Submit feedback</button>      
+    </div>
+    
+</body>
+</html>

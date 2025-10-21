@@ -1,0 +1,59 @@
+<!-- You are working on a simple "Student Result Dashboard" for a school's internal website. 
+You are given an array of student objects where each student has a name and score. Your tasks are:
+
+List all student names.
+
+Create a new array that shows only the names of students who scored more than 60.
+
+Find the total score of all students.
+
+Check if all students passed (score > 35).
+
+Check if at least one student scored more than 90.
+
+Sort the students by their score in descending order and display their names along with scores -->
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student</title>
+</head>
+<body>
+    <h1>Students Dashboard</h1>
+    <p id="names"></p>
+    <p id="morethan"></p>
+    <p id="totalscore"></p>
+    <p id="pass"></p>
+    <p id="leastone"></p>
+    <p id="sort"></p>
+   
+    <script>
+        var students=[
+            {name:"Soorya", score : 85},
+            {name:"Aarunya", score : 55},
+            {name:"Nitty", score : 95},
+        ];
+        var names = students.map(students=>students.name);
+        document.getElementById("names").innerHTML = "Students Names  <br><br>" + names.join("<br> <br>");
+
+        var morethan = students.filter(students=>students.score>60).map(students=>students.name);
+        document.getElementById("morethan").innerHTML = "Students who score more than 60 : <br><br>" + morethan.join("<br><br>");
+
+        var totalscore = students.reduce((total,students)=>total+students.score,0);
+        document.getElementById("totalscore").innerHTML = "Total Score for all Students =  " + totalscore;
+
+        var pass = students.every(students=>students.score>35);
+        document.getElementById("pass").innerHTML = "Did all students pass? : " + pass;
+
+        var leastone = students.some(students=>students.score>90);
+        document.getElementById("leastone").innerHTML = "Any Student Scored more than 90 : " + leastone;
+
+        var sort = students.sort((a,b)=>b.score - a.score).map(students=> students.name + " " + students.score );
+        document.getElementById("sort").innerHTML = "Sorted : " + sort;
+    </script>
+</body>
+</html>

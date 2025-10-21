@@ -1,0 +1,63 @@
+<!-- Create a simple web-based event reminder tool. The page should take a user's input of a past date 
+(for example, their last birthday) and display:
+The year, month (name, not number), and day of that date.
+How many full years have passed since that date.
+A custom message that says:
+“It has been more than a year since that date.”
+or “It has been less than a year since that date.” -->
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>HW js day 7</title>
+</head>
+<body>
+    <h2>Event Reminder</h2>
+
+    <label for="pastDate">Enter a past date:</label>
+    <input type="date" id="pastDate">
+    <button onclick="checkEvent()">Check</button>
+
+    <p id="output"></p>
+
+    <script>
+        function checkEvent() {
+            let inputDate = document.getElementById("pastDate").value;
+
+
+            if (!inputDate) {
+                alert("Please enter a valid date!");
+                return;
+            }
+
+            let past = new Date(inputDate);
+
+            let year = past.getFullYear();
+            let monthNames = [
+                "January", "February", "March", "April", "May", "June",
+                "July", "August", "September", "October", "November", "December"
+            ];
+            let month = monthNames[past.getMonth()];
+            let day = past.getDate();
+
+            let today = new Date();
+            let yearsPassed = today.getFullYear() - year;
+
+            if (
+                today.getMonth() < past.getMonth() ||
+                (today.getMonth() === past.getMonth() && today.getDate() < past.getDate())
+            ) {
+                yearsPassed--;
+            }
+
+            let message = yearsPassed >= 1 
+                ? "It has been more than a year since that date."
+                : "It has been less than a year since that date.";
+
+            // Display result
+            document.getElementById("output").innerHTML =`The date you entered: ${day} ${month}, ${year}<br> +Full years passed since that date: ${yearsPassed}<br> +${message}`;
+        }
+    </script>
+</body>
+</html>
