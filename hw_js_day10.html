@@ -1,0 +1,34 @@
+<!-- You received user feedback from a contact form in a JSON format. Your task is to:
+Convert the JSON string into a usable format.
+Use a named arrow function to check if the feedback contains the word "thank" (in any case like "Thank", "THANK", etc.).
+If the word is found, show a message "Positive feedback received".
+If the word is not found, show "Feedback noted".
+Use try-catch to handle any error if the JSON is invalid -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HW JS DAY 10</title>
+</head>
+<body>
+     <script>
+    const feedbackJSON = '{"name":"Soorya","email":"soorya@gmail.com","feedback":"Thank you for your help!"}';
+    const checkFeedback = () => {
+      try {
+        const feedbackData = JSON.parse(feedbackJSON);
+        const message = feedbackData.feedback;
+        if (/thank/i.test(message)) {
+          console.log("Positive feedback received");
+        } else {
+          console.log("Feedback noted");
+        }
+      } catch (error) {
+        console.error("Error: Invalid JSON data");
+      }
+    };
+    checkFeedback();
+  </script>
+</body>
+</html>

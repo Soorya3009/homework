@@ -1,0 +1,31 @@
+<!-- You are creating a simple comment filtering system for a blog site. 
+You need to write a JavaScript function that takes a user's comment and performs the following:
+Check whether the comment contains any of the following banned words: "bad", "ugly", or "stupid" (case-insensitive).
+If it contains a banned word, replace it with "***" using a regular expression.
+Count how many numbers are mentioned in the comment.
+Count how many words in the comment begin with a capital letter.
+Return a final message with the cleaned comment, number count, and capitalized word count.
+Test the function with this comment:
+ "I think this movie was BAD and 100% Stupid! But the Acting was Amazing and 3 actors were great. -->
+
+
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HW JS DAY 9</title>
+ </head>
+ <body>
+    <script>
+        let test_Comment = "I think this movie was BAD and 100% Stupid! But the Acting was Amazing and 3 actors were great.";
+        console.log(filter_Comment(test_Comment));
+        function filter_Comment(comment) {
+            let cleaned_Comment = comment.replace(/\b(bad|ugly|stupid)\b/gi, "***");
+            let number_Count = (comment.match(/\d+/g) || []).length;
+            let capitalized_Words = (comment.match(/\b[A-Z][a-zA-Z]*/g) || []).length;
+            return `Cleaned Comment: ${cleaned_Comment}\n Numbers Mentioned: ${number_Count}\n Capitalized Words: ${capitalized_Words}`;
+        }
+    </script>
+ </body>
+ </html>

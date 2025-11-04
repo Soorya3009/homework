@@ -1,0 +1,110 @@
+<!-- Create a simple feedback web page that includes:
+A form with:
+    A text input for the user's name
+    A textarea for their feedback
+A submit button
+    When the form is submitted:
+   The input values (name and feedback) should display on the same page without refreshing.
+   A confirmation message (e.g., “Thanks for your feedback!”) should be shown in green.
+   After 5 seconds, the confirmation message should disappear automatically.
+When the mouse hovers over the feedback display, the text should turn blue. When the mouse leaves, it should return to black. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HW JS DAY 12</title>
+    <style>
+     body {
+      font-family: Arial, sans-serif;
+      margin: 40px;
+    }
+
+    h2 {
+      color: #333;
+    }
+
+    label {
+      display: block;
+      margin-top: 10px;
+    }
+
+    textarea, input {
+      width: 300px;
+      padding: 8px;
+      margin-top: 5px;
+    }
+
+    button {
+      margin-top: 10px;
+      padding: 8px 16px;
+      cursor: pointer;
+    }
+
+    #confirmation {
+      color: green;
+      font-weight: bold;
+      margin-top: 10px;
+    }
+
+    #displayArea {
+      margin-top: 20px;
+    }
+
+    #feedbackDisplay {
+      color: black;
+    }
+  </style>
+</head>
+<body>
+    <form id="feedbackForm">
+    <label for="name">Your Name:</label>
+    <input type="text" id="name" required>
+
+    <label for="feedback">Your Feedback:</label>
+    <textarea id="feedback" rows="4" required></textarea>
+
+    <br>
+    <button type="submit">Submit</button>
+  </form>
+
+  <p id="confirmation"></p>
+
+  <div id="displayArea">
+    <h3>Feedback Received:</h3>
+    <p><strong>Name:</strong> <span id="nameDisplay"></span></p>
+    <p><strong>Feedback:</strong> <span id="feedbackDisplay"></span></p>
+  </div>
+
+  <script>
+    const form = document.getElementById("feedbackForm");
+    const nameInput = document.getElementById("name");
+    const feedbackInput = document.getElementById("feedback");
+    const nameDisplay = document.getElementById("nameDisplay");
+    const feedbackDisplay = document.getElementById("feedbackDisplay");
+    const confirmation = document.getElementById("confirmation");
+
+    form.addEventListener("submit", function(event) {
+      event.preventDefault();
+      nameDisplay.textContent = nameInput.value;
+  
+      confirmation.textContent = " Thanks for your feedback!";
+      confirmation.style.display = "block";
+      setTimeout(() => {
+        confirmation.textContent = "";
+      }, 5000);
+
+      form.reset();
+    });
+
+    feedbackDisplay.addEventListener("mouseover", function() {
+      feedbackDisplay.style.color = "blue";
+    });
+
+    feedbackDisplay.addEventListener("mouseout", function() {
+      feedbackDisplay.style.color = "black";
+    });
+  </script>
+</body>
+</html>
